@@ -1,0 +1,268 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background-image: url('');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  height: 100%;
+}
+
+.cursor {
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.btn {
+  display: inline-block;
+  background: #00b894;
+  padding: 10px 20px;
+  color: white;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #019875;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.project:hover {
+  transform: scale(1.03);
+}
+
+.project img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+#about {
+  background-color: #fff;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#about h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #00b894;
+}
+
+#about p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+#skills {
+  background-color: #f0f0f0;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+#skills h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #00b894;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skills div {
+  background: #dfe6e9;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.skills div:hover {
+  background: #00b894;
+  color: white;
+}
+#contact {
+  background-color: #fff;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #00b894;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+form button {
+  background: #00b894;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background: #019875;
+}
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .hero {
+  background-blend-mode: darken;
+}
+
+.dark-mode .project,
+.dark-mode #about,
+.dark-mode #skills,
+.dark-mode #contact {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  box-shadow: none;
+}
+
+.dark-mode nav a {
+  color: #f1f1f1;
+}
+
+#toggle-dark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #00b894;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+#toggle-dark:hover {
+  background: #019875;
+}
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #00b894;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+#topBtn:hover {
+  background-color: #019875;
+}
+
+.iframe-container {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+.wave {
+  display: inline-block;
+  animation: waveAnim 1.5s infinite ease-in-out;
+  transform-origin: 70% 70%;
+}
+
+@keyframes waveAnim {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(12deg); }
+  80% { transform: rotate(-8deg); }
+  100% { transform: rotate(0deg); }
+}
+
+

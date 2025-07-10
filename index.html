@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ritik | Animated Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/lottie-web@5.9.4/build/player/lottie.min.js"></script>
+
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Hi, I'm Ritik <span class="wave">👨‍💻</span></h1>
+      <p data-aos="fade-up">Web Developer | CSE Student | Tech Explorer</p>
+      <a href="#projects" class="btn" data-aos="zoom-in">View My Projects</a>
+      <button id="toggle-dark">🌓 Toggle Dark Mode</button>
+
+      
+
+    </div>
+
+    <div class="overlay">
+    <!-- ADD THIS BELOW YOUR HEADING -->
+    <div id="lottie-animation" style="width: 300px; height: 300px; margin: 0 auto;"></div>
+    <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
+    <p data-aos="fade-up">Web Developer | CSE Student | Tech Explorer</p>
+    <a href="#projects" class="btn" data-aos="zoom-in">View My Projects</a>
+  </div>
+
+  </header>
+
+  <section id="projects">
+    <h2 data-aos="fade-up">🚀 My Projects</h2>
+    
+    <div class="project" data-aos="fade-right">
+    <img src="asset/1410678-digital-universe-space-planet-artist-artwork-digital.jpg" alt="Universe Space Gallery">
+  <div>
+    <h3>Universe Space Gallery</h3>
+    <p> space gallery showcasing stunning visuals of the universe.</p>
+    <a href="https://ritikkumar07.github.io/Space/" target="_blank">🔗 GitHub</a>
+    <a href="assets/weather.zip" download>📦 Download</a>
+    <div class="iframe-container">
+      <iframe src="https://ritikkumar07.github.io/Space/" loading="lazy" title="Live Preview" frameborder="0"></iframe>
+    </div>
+  </div>
+</div>
+      <!-- Project 2 -->
+  <div class="project" data-aos="fade-left">
+    <img src="assets/project2.png" alt="AI Quote Generator">
+    <div>
+      <h3>AI Quote Generator</h3>
+      <p>🚧 This website is currently under development. Stay tuned!</p>
+      <a href="https://github.com/yourgithub/todo-app" target="_blank">🔗 GitHub</a>
+      <a href="assets/todo.zip" download>📦 Download</a>
+      <div class="iframe-container">
+        <iframe src="https://todo-demo.netlify.app"></iframe>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+    
+    <section id="about" data-aos="fade-up">
+  <h2>👨‍💻 About Me</h2>
+  <p>
+    I'm Ritik, a B.Tech CSE student passionate about web development and exploring new tech.
+    I enjoy building cool projects with HTML, CSS, and JavaScript. Always learning. Always curious.
+  </p>
+
+  <section id="skills" data-aos="fade-up">
+  <h2>🛠️ My Skills</h2>
+  <div class="skills">
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>JavaScript</div>
+    <div>Python</div>
+    <div>Git & GitHub</div>
+    <div>Responsive Design</div>
+    <div>Firebase</div>
+    <div>C++</div>
+  </div>
+</section>
+
+</section>
+
+  </section>
+  <section id="contact" data-aos="fade-up">
+  <h2>📬 Contact Me</h2>
+  <form action="https://formspree.io/f/movwgqnn" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+  <footer>
+    <p>Made with 💙 by Ritik | © 2025</p>
+  </footer>
+
+  <!-- AOS & Typing JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Typing Effect
+    const text = "Hi, I'm Ritik 👨‍💻";
+    let i = 0;
+    function typing() {
+      if (i < text.length) {
+        document.getElementById("typed-text").textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, 100);
+      }
+    }
+    typing();
+  </script>
+  <script>
+  const toggleBtn = document.getElementById("toggle-dark");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+</script>
+<script>
+  const topBtn = document.getElementById("topBtn");
+
+  // Show button when scrolling down
+  window.onscroll = () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to top when clicked
+  topBtn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+</script>
+
+<script>
+  const anim = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'asset/web-designer-with-idea.json' // Replace with your Lottie JSON URL
+  });
+</script>
+
+
+<button id="topBtn" title="Go to top">⬆️</button>
+
+</body>
+</html>
