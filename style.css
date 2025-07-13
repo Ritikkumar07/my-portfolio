@@ -208,3 +208,40 @@ footer {
     text-align: center;
   }
 }
+
+/* ✅ DARK MODE STYLING */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p,
+.dark-mode a,
+.dark-mode span,
+.dark-mode .btn,
+.dark-mode button {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .btn,
+.dark-mode button {
+  background-color: #333;
+  border: none;
+}
+
+.dark-mode .project,
+.dark-mode .skills div,
+.dark-mode form,
+.dark-mode header.hero {
+  background: rgba(20, 20, 20, 0.8);
+  color: #eee;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode footer {
+  background: #000;
+  color: #ccc;
+}
+
