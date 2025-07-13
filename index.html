@@ -9,76 +9,62 @@
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/lottie-web@5.9.4/build/player/lottie.min.js"></script>
-  
-
 
 </head>
 
 <body>
+  
+<header class="hero">
+  <div class="overlay">
 
-  <header class="hero">
-    <div class="overlay">
-      <h1>Hi, I'm Ritik <span class="wave">👨‍💻</span></h1>
-      <p data-aos="fade-up">Web Developer | CSE Student | Tech Explorer</p>
-      <a href="#projects" class="btn" data-aos="zoom-in">View My Projects</a>
-      <button id="toggle-dark">🌓 Toggle Dark Mode</button>
+    <!-- Typing Effect Only -->
+    <h1>
+      <span id="typed-text"></span><span class="cursor">|</span>
+    </h1>
 
-      
-
-    </div>
-
-    <div class="overlay">
-    <!-- ADD THIS BELOW YOUR HEADING -->
-    <div id="lottie-animation" style="width: 300px; height: 300px; margin: 0 auto;"></div>
-    <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
     <p data-aos="fade-up">Web Developer | CSE Student | Tech Explorer</p>
-    <a href="#projects" class="btn" data-aos="zoom-in">View My Projects</a>
-  </div>
 
-  </header>
+    <a href="#projects" class="btn" data-aos="zoom-in">View My Projects</a>
+
+    <button id="toggle-dark">🌓 Toggle Dark Mode</button>
+
+    <div id="lottie-animation" style="width: 300px; height: 300px; margin: 20px auto;"></div>
+
+  </div>
+</header>
+
 
   <section id="projects">
     <h2 data-aos="fade-up">🚀 My Projects</h2>
 
-    <!-- Project 1 -->
-  <div class="project" data-aos="fade-left">
-<!--     <img src="assets/project2.png" alt="AI Quote Generator"> -->
-    <div>
-      <h3>Music Player</h3>
-      <p>🚧 This website is currently under development. Stay tuned!</p>
-      <a href="https://ritik07.netlify.app" targe="_blank">🔗 My Fav..</a>
-<!--       <a href="assets/todo.zip" download>📦 Download</a> -->
-      <div class="iframe-container">
-        <iframe src="https://ritik07.netlify.app"></iframe>
-      </div>
-    </div>
-  </div>
-
-    <!-- Project 2 -->
+     <!-- Project 1 -->
     <div class="project" data-aos="fade-right">
-<!--     <img src="asset/1410678-digital-universe-space-planet-artist-artwork-digital.jpg" alt="Universe Space Gallery"> -->
+    
   <div>
     <h3>Universe Space Gallery</h3>
     <p> space gallery showcasing stunning visuals of the universe.</p>
     <a href="https://ritikkumar07.github.io/Space/" target="_blank">🔗 GitHub</a>
+    <a href="assets/weather.zip" download>📦 Download</a>
     <div class="iframe-container">
-      <iframe src="https://ritikkumar07.github.io/Space/" loading="lazy" title="Live Preview" frameborder="0"></iframe>
+      <iframe src="https://ritikkumar07.github.io/Space/" frameborder="0" allowfullscreen></iframe>
+      
     </div>
   </div>
 </div>
-   
-  <!-- Project 3 -->
-<div class="project" data-aos="fade-right">
-<!--     <img src="asset/1410678-digital-universe-space-planet-artist-artwork-digital.jpg" alt="Universe Space Gallery"> -->
-  <div>
-    <h3>calendar</h3>
-    <p>Welcome to your all-in-one calendar website </p>
-    <a href="https://calc2024.netlify.app/" target="_blank">🔗 Calendar</a>
-    <div class="iframe-container">
-      <iframe src="https://calc2024.netlify.app/" loading="lazy" title="Live Preview" frameborder="0"></iframe>
+      <!-- Project 2 -->
+  <div class="project" data-aos="fade-left">
+    <div>
+      <h3>AI Quote Generator</h3>
+      <p>🚧 This website is currently under development. Stay tuned!</p>
+      <a href="https://github.com/yourgithub/todo-app" target="_blank">🔗 GitHub</a>
+      <!-- <a href="assets/todo.zip" download>📦 Download</a> -->
+      <div class="iframe-container">
+        <iframe src="https://todo-demo.netlify.app"></iframe>
+      </div>
     </div>
   </div>
-</div>
+  
+
 
 
     
@@ -92,12 +78,13 @@
   <section id="skills" data-aos="fade-up">
   <h2>🛠️ My Skills</h2>
   <div class="skills">
-    <div href="https://www.wix.com/">HTML</div>
+    <div>HTML</div>
     <div>CSS</div>
     <div>JavaScript</div>
     <div>Python</div>
     <div>Git & GitHub</div>
     <div>Responsive Design</div>
+    <div>C++</div>
   </div>
 </section>
 
@@ -166,9 +153,10 @@
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'asset/web-designer-with-idea.json' // Replace with your Lottie JSON URL
+    path: 'https://assets5.lottiefiles.com/packages/lf20_0yfsb3a1.json' // 👈 Boy working animation
   });
 </script>
+
 
 
 <button id="topBtn" title="Go to top">⬆️</button>
