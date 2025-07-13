@@ -1,267 +1,210 @@
-body {
+/* General Reset */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-.hero {
-  background-image: url('');
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header.hero {
   position: relative;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
 }
 
 .overlay {
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 100px 20px;
-  text-align: center;
-  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.cursor {
-  animation: blink 0.7s infinite;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
-@keyframes blink {
-  0% {opacity: 1;}
-  50% {opacity: 0;}
-  100% {opacity: 1;}
+
+.wave {
+  display: inline-block;
+  animation: wave 1.5s infinite;
+}
+
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0); }
+  30% { transform: rotate(20deg); }
 }
 
 .btn {
   display: inline-block;
-  background: #00b894;
-  padding: 10px 20px;
-  color: white;
   margin-top: 20px;
+  padding: 10px 20px;
+  background: #333;
+  color: white;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.btn:hover {
-  background: #019875;
+  border-radius: 5px;
 }
 
-section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+#toggle-dark {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: none;
+  background: #fff;
+  color: #333;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .project {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
   background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-.project:hover {
-  transform: scale(1.03);
-}
-
-.project img {
-  width: 150px;
-  height: auto;
-  border-radius: 10px;
-}
-
-footer {
-  text-align: center;
-  background: #333;
-  color: white;
   padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
-#about {
-  background-color: #fff;
-  padding: 60px 20px;
-  max-width: 900px;
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
   margin: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-#about h2 {
-  margin-bottom: 15px;
-  font-size: 28px;
-  color: #00b894;
-}
-
-#about p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-#skills {
-  background-color: #f0f0f0;
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 30px auto;
-  border-radius: 10px;
-}
-
-#skills h2 {
-  margin-bottom: 15px;
-  font-size: 28px;
-  color: #00b894;
 }
 
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .skills div {
-  background: #dfe6e9;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: bold;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.skills div:hover {
-  background: #00b894;
+  padding: 8px 12px;
+  background: #00f2fe;
+  border-radius: 5px;
   color: white;
-}
-#contact {
-  background-color: #fff;
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-#contact h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
-  color: #00b894;
-  text-align: center;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
 }
 
-form input, form textarea {
-  padding: 12px;
-  font-size: 16px;
+form input, form textarea, form button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
 }
 
 form button {
-  background: #00b894;
+  background: #4facfe;
   color: white;
-  padding: 12px;
   border: none;
-  border-radius: 8px;
-  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
-form button:hover {
-  background: #019875;
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+  margin-top: 40px;
 }
-/* Dark mode styles */
+
 .dark-mode {
-  background-color: #121212;
-  color: #f1f1f1;
+  background: #1c1c1c;
+  color: #f4f4f4;
 }
 
-.dark-mode .hero {
-  background-blend-mode: darken;
-}
-
-.dark-mode .project,
-.dark-mode #about,
-.dark-mode #skills,
-.dark-mode #contact {
-  background-color: #1e1e1e;
-  color: #f1f1f1;
-  box-shadow: none;
-}
-
-.dark-mode nav a {
-  color: #f1f1f1;
-}
-
-#toggle-dark {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #00b894;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: bold;
-}
-#toggle-dark:hover {
-  background: #019875;
-}
 #topBtn {
-  display: none; /* Hidden by default */
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
-  z-index: 100;
-  font-size: 18px;
+  display: none;
+  font-size: 1.5rem;
+  padding: 10px;
   border: none;
-  outline: none;
-  background-color: #00b894;
+  border-radius: 50%;
+  background: #00f2fe;
   color: white;
   cursor: pointer;
-  padding: 12px 16px;
-  border-radius: 50%;
-  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-#topBtn:hover {
-  background-color: #019875;
+/* ========== Responsive Design ========== */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn, #toggle-dark {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .iframe-container {
+    padding-bottom: 70%; /* More height for mobile */
+  }
+
+  .project {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  form {
+    width: 100%;
+    padding: 0 10px;
+  }
 }
 
-.iframe-container {
-  margin-top: 15px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+@media (max-width: 480px) {
+  header.hero {
+    padding: 40px 15px;
+  }
 
-.iframe-container iframe {
-  width: 100%;
-  height: 600px;
-  border: none;
-  border-radius: 10px;
-}
+  h1 {
+    font-size: 1.8rem;
+  }
 
-.wave {
-  display: inline-block;
-  animation: waveAnim 1.5s infinite ease-in-out;
-  transform-origin: 70% 70%;
-}
+  .overlay {
+    padding: 0 10px;
+  }
 
-@keyframes waveAnim {
-  0% { transform: rotate(0deg); }
-  20% { transform: rotate(15deg); }
-  40% { transform: rotate(-10deg); }
-  60% { transform: rotate(12deg); }
-  80% { transform: rotate(-8deg); }
-  100% { transform: rotate(0deg); }
+  .skills div {
+    width: 100%;
+    text-align: center;
+  }
 }
-
