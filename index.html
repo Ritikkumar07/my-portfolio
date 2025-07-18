@@ -11,65 +11,30 @@
   <title>Ritik | Animated Portfolio</title>
 
   <link rel="stylesheet" href="style.css" />
-
-
-
   <!-- AOS Animation Library -->
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <script src="https://unpkg.com/lottie-web@5.9.4/build/player/lottie.min.js"></script>
-
-
-
 </head>
-
-
-
 <body>
-
-  
-
 <header class="hero">
 
   <div class="overlay">
-
-
-
     <!-- Typing Effect Only -->
 
     <h1>
-
       <span id="typed-text"></span><span class="cursor">|</span>
 
     </h1>
 
-
-
-    <p data-aos="fade-up">Web Developer | CSE Student | Tech Explorer</p>
-
-
-
+    <p data-aos="fade-up">Web Developer | CSE Student | Tech Explorer</p
     <a href="#projects" class="btn" data-aos="zoom-in">View My Projects</a>
-
-
-
     <button id="toggle-dark">🌓 Toggle Dark Mode</button>
-
-
-
     <div id="lottie-animation" style="width: 300px; height: 300px; margin: 20px auto;"></div>
-
-
-
   </div>
 
 </header>
-
-
-
-
-
   <section id="projects">
 
     <h2 data-aos="fade-up">🚀 My Projects</h2>
@@ -153,3 +118,180 @@
     </div>
 
   </div>
+
+    <section id="about" data-aos="fade-up">
+
+  <h2>👨‍💻 About Me</h2>
+
+  <p>
+
+    I'm Ritik, a B.Tech CSE student passionate about web development and exploring new tech.
+
+    I enjoy building cool projects with HTML, CSS, and JavaScript. Always learning. Always curious.
+
+  </p>
+
+
+
+  <section id="skills" data-aos="fade-up">
+
+  <h2>🛠️ My Skills</h2>
+
+  <div class="skills">
+
+    <div>HTML</div>
+
+    <div>CSS</div>
+
+    <div>JavaScript</div>
+
+    <div>Python</div>
+
+    <div>Git & GitHub</div>
+
+    <div>Responsive Design</div>
+
+    <div>C++</div>
+
+  </div>
+
+</section>
+
+
+
+</section>
+
+
+
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+
+  <h2>📬 Contact Me</h2>
+
+  <form action="https://formspree.io/f/movwgqnn" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+
+</section>
+
+  <footer style="text-align: center; padding: 15px; background-color: #1e1e1e; color: #fff; font-family: 'Segoe UI', sans-serif;">
+
+  <p style="margin: 0;">
+
+    &copy; 2025 
+
+    <a href="https://myfoli0.netlify.app/" target="_blank" style="font-weight: 600; color: #00ffcc; text-decoration: none;">
+
+      Ritik
+
+    </a> • All rights reserved.
+
+  </p>
+
+</footer>
+  <!-- AOS & Typing JS -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+
+    AOS.init();
+
+
+
+    // Typing Effect
+
+    const text = "Hi, I'm Ritik 👨‍💻";
+
+    let i = 0;
+
+    function typing() {
+
+      if (i < text.length) {
+
+        document.getElementById("typed-text").textContent += text.charAt(i);
+
+        i++;
+
+        setTimeout(typing, 100);
+
+      }
+
+    }
+
+    typing();
+
+  </script>
+
+  <script>
+
+  const toggleBtn = document.getElementById("toggle-dark");
+
+  toggleBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+  });
+
+</script>
+
+<script>
+
+  const topBtn = document.getElementById("topBtn");
+
+  // Show button when scrolling down
+
+  window.onscroll = () => {
+
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+
+      topBtn.style.display = "block";
+
+    } else {
+
+      topBtn.style.display = "none";
+
+    }
+
+  };
+  // Scroll to top when clicked
+
+  topBtn.onclick = () => {
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+  };
+
+</script>
+<script>
+
+  const anim = lottie.loadAnimation({
+
+    container: document.getElementById('lottie-animation'),
+
+    renderer: 'svg',
+
+    loop: true,
+
+    autoplay: true,
+
+    path: 'https://assets5.lottiefiles.com/packages/lf20_0yfsb3a1.json' // 👈 Boy working animation
+
+  });
+
+</script>
+
+<button id="topBtn" title="Go to top">⬆️</button>
+
+</body>
+
+</html>
