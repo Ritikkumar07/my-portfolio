@@ -1,311 +1,491 @@
 /* General Reset */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+
 }
 
-/* CSS Variables for Theming */
-:root {
-  /* Light Mode Colors */
-  --body-bg: #f4f4f4;
-  --text-color: #333;
-  --header-gradient-start: #4facfe;
-  --header-gradient-end: #00f2fe;
-  --project-bg: white;
-  --project-shadow: rgba(0,0,0,0.1);
-  --skill-bg: #00f2fe;
-  --skill-text: white;
-  --form-border: #ccc;
-  --form-btn-bg: #4facfe;
-  --form-btn-text: white;
-  --footer-bg: #333;
-  --footer-text: white;
-  --footer-link-color: #00ffcc;
-  --toggle-btn-bg: #fff;
-  --toggle-btn-text: #333;
-  --top-btn-bg: #00f2fe;
-  --top-btn-text: white;
-}
 
-body.dark-mode {
-  /* Dark Mode Colors */
-  --body-bg: #121212;
-  --text-color: #f1f1f1;
-  --header-gradient-start: #1a1a1a; /* Darker gradient start */
-  --header-gradient-end: #2a2a2a;   /* Darker gradient end */
-  --project-bg: #1e1e1e;
-  --project-shadow: rgba(255, 255, 255, 0.1);
-  --skill-bg: #333;
-  --skill-text: #f1f1f1;
-  --form-border: #555;
-  --form-btn-bg: #555;
-  --form-btn-text: #f1f1f1;
-  --footer-bg: #000;
-  --footer-text: #ccc;
-  --footer-link-color: #00ffcc; /* Can keep this or change for dark mode */
-  --toggle-btn-bg: #333;
-  --toggle-btn-text: #f1f1f1;
-  --top-btn-bg: #333;
-  --top-btn-text: #f1f1f1;
-}
 
 body {
-  font-family: 'Inter', sans-serif; /* Changed to Inter, ensure it's linked in HTML */
-  background: var(--body-bg);
-  color: var(--text-color);
-  line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
+
+  font-family: Arial, sans-serif;
+
+  background: #f4f4f4;
+
+  color: #333;
+
+  line-height: 1.6;
+
 }
+
+
 
 header.hero {
-  position: relative;
-  background: linear-gradient(to bottom, var(--header-gradient-start), var(--header-gradient-end));
-  text-align: center;
-  padding: 60px 20px;
-  color: var(--text-color); /* Use variable for consistency */
+
+  position: relative;
+
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+
+  text-align: center;
+
+  padding: 60px 20px;
+
+  color: white;
+
 }
+
+
 
 .overlay {
-  max-width: 800px;
-  margin: 0 auto;
+
+  max-width: 800px;
+
+  margin: 0 auto;
+
 }
+
+
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: var(--text-color); /* Ensure headings adapt to dark mode */
+
+  font-size: 2.5rem;
+
+  margin-bottom: 10px;
+
 }
 
-h2 {
-    color: var(--text-color); /* Ensure headings adapt to dark mode */
-}
+
 
 .wave {
-  display: inline-block;
-  animation: wave 1.5s infinite;
+
+  display: inline-block;
+
+  animation: wave 1.5s infinite;
+
 }
+
+
 
 @keyframes wave {
-  0%, 60%, 100% { transform: rotate(0); }
-  30% { transform: rotate(20deg); }
+
+  0%, 60%, 100% { transform: rotate(0); }
+
+  30% { transform: rotate(20deg); }
+
 }
+
+
 
 .btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: var(--form-btn-bg); /* Using a variable for consistency */
-  color: var(--form-btn-text); /* Using a variable for consistency */
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition */
+
+  display: inline-block;
+
+  margin-top: 20px;
+
+  padding: 10px 20px;
+
+  background: #333;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+
 }
 
-.btn:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
+
 
 #toggle-dark {
-  margin-top: 15px;
-  padding: 8px 16px;
-  border: none;
-  background: var(--toggle-btn-bg);
-  color: var(--toggle-btn-text);
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Added transition */
+
+  margin-top: 15px;
+
+  padding: 8px 16px;
+
+  border: none;
+
+  background: #fff;
+
+  color: #333;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
 }
 
-#toggle-dark:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
+
 
 .project {
-  background: var(--project-bg);
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  box-shadow: 0 4px 8px var(--project-shadow);
-  border-radius: 10px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Added transition */
+
+  background: white;
+
+  padding: 20px;
+
+  margin: 20px auto;
+
+  max-width: 800px;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  border-radius: 10px;
+
 }
 
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px var(--project-shadow); /* More prominent shadow on hover */
-}
+
 
 .iframe-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-top: 10px;
+
+  position: relative;
+
+  padding-bottom: 56.25%;
+
+  height: 0;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  margin-top: 10px;
+
 }
+
+
 
 .iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
 }
+
+
 
 section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+
+  padding: 40px 20px;
+
+  max-width: 1000px;
+
+  margin: auto;
+
 }
+
+
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
 }
+
+
 
 .skills div {
-  padding: 8px 12px;
-  background: var(--skill-bg);
-  border-radius: 5px;
-  color: var(--skill-text);
-  transition: background-color 0.3s ease, color 0.3s ease;
+
+  padding: 8px 12px;
+
+  background: #00f2fe;
+
+  border-radius: 5px;
+
+  color: white;
+
 }
+
+
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  max-width: 500px;
+
+  margin: auto;
+
 }
 
-form input, form textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid var(--form-border);
-  background-color: var(--body-bg); /* Ensure input background changes */
-  color: var(--text-color); /* Ensure input text color changes */
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+
+form input, form textarea, form button {
+
+  padding: 10px;
+
+  font-size: 1rem;
+
+  border-radius: 5px;
+
+  border: 1px solid #ccc;
+
 }
 
-form input:focus, form textarea:focus {
-    outline: none;
-    border-color: var(--form-btn-bg); /* Highlight border on focus */
-}
+
 
 form button {
-  background: var(--form-btn-bg);
-  color: var(--form-btn-text);
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  background: #4facfe;
+
+  color: white;
+
+  border: none;
+
+  cursor: pointer;
+
 }
 
-form button:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
+
+
+footer {
+
+  text-align: center;
+
+  padding: 20px;
+
+  background: #333;
+
+  color: white;
+
+  margin-top: 40px;
+
 }
 
-.main-footer { /* Renamed from 'footer' to avoid potential conflicts */
-  text-align: center;
-  padding: 15px;
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
-  font-family: 'Segoe UI', sans-serif; /* Or your main font */
-  margin-top: 40px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+
+
+.dark-mode {
+
+  background: #1c1c1c;
+
+  color: #f4f4f4;
+
 }
 
-.main-footer p {
-  margin: 0;
-}
 
-.main-footer a {
-  font-weight: 600;
-  color: var(--footer-link-color);
-  text-decoration: none;
-}
-
-.main-footer a:hover {
-  text-decoration: underline;
-}
 
 #topBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 20px;
-  display: none;
-  font-size: 1.5rem;
-  padding: 10px;
-  border: none;
-  border-radius: 50%;
-  background: var(--top-btn-bg);
-  color: var(--top-btn-text);
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+  position: fixed;
+
+  bottom: 30px;
+
+  right: 20px;
+
+  display: none;
+
+  font-size: 1.5rem;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #00f2fe;
+
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
 }
 
-#topBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
+
 
 /* ========== Responsive Design ========== */
 
+
+
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
 
-  .btn, #toggle-dark {
-    width: auto; /* Allow buttons to size naturally within flex/block context */
-    margin-top: 10px;
-  }
+  h1 {
 
-  .skills {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    font-size: 2rem;
 
-  .iframe-container {
-    padding-bottom: 70%; /* More height for mobile */
-  }
+  }
 
-  .project {
-    margin: 10px;
-    padding: 15px;
-  }
 
-  form {
-    width: 100%;
-    padding: 0 10px;
-  }
+
+  .btn, #toggle-dark {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+  }
+
+
+
+  .skills {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+
+
+  .iframe-container {
+
+    padding-bottom: 70%; /* More height for mobile */
+
+  }
+
+
+
+  .project {
+
+    margin: 10px;
+
+    padding: 15px;
+
+  }
+
+
+
+  form {
+
+    width: 100%;
+
+    padding: 0 10px;
+
+  }
+
 }
 
+
+
 @media (max-width: 480px) {
-  header.hero {
-    padding: 40px 15px;
-  }
 
-  h1 {
-    font-size: 1.8rem;
-  }
+  header.hero {
 
-  .overlay {
-    padding: 0 10px;
-  }
+    padding: 40px 15px;
 
-  .skills div {
-    width: 100%;
-    text-align: center;
-  }
+  }
+
+
+
+  h1 {
+
+    font-size: 1.8rem;
+
+  }
+
+
+
+  .overlay {
+
+    padding: 0 10px;
+
+  }
+
+
+
+  .skills div {
+
+    width: 100%;
+
+    text-align: center;
+
+  }
+
+}
+
+
+
+/* ✅ DARK MODE STYLING */
+
+.dark-mode {
+
+  background-color: #121212;
+
+  color: #f1f1f1;
+
+}
+
+
+
+.dark-mode h1,
+
+.dark-mode h2,
+
+.dark-mode p,
+
+.dark-mode a,
+
+.dark-mode span,
+
+.dark-mode .btn,
+
+.dark-mode button {
+
+  color: #f1f1f1 !important;
+
+}
+
+
+
+.dark-mode .btn,
+
+.dark-mode button {
+
+  background-color: #333;
+
+  border: none;
+
+}
+
+
+
+.dark-mode .project,
+
+.dark-mode .skills div,
+
+.dark-mode form,
+
+.dark-mode header.hero {
+
+  background: rgba(20, 20, 20, 0.8);
+
+  color: #eee;
+
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+
+}
+
+
+
+.dark-mode footer {
+
+  background: #000;
+
+  color: #ccc;
+
 }
