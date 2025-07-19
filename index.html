@@ -1,297 +1,179 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ritik | Animated Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 
-  <meta charset="UTF-8" />
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/lottie-web@5.9.4/build/player/lottie.min.js"></script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Ritik | Animated Portfolio</title>
-
-  <link rel="stylesheet" href="style.css" />
-  <!-- AOS Animation Library -->
-
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <script src="https://unpkg.com/lottie-web@5.9.4/build/player/lottie.min.js"></script>
 </head>
+
 <body>
+  
 <header class="hero">
+  <div class="overlay">
 
-  <div class="overlay">
-    <!-- Typing Effect Only -->
+    <!-- Typing Effect Only -->
+    <h1>
+      <span id="typed-text"></span><span class="cursor">|</span>
+    </h1>
 
-    <h1>
-      <span id="typed-text"></span><span class="cursor">|</span>
+    <p data-aos="fade-up">Web Developer | CSE Student | Tech Explorer</p>
 
-    </h1>
+    <a href="#projects" class="btn" data-aos="zoom-in">View My Projects</a>
 
-    <p data-aos="fade-up">Web Developer | CSE Student | Tech Explorer</p
-    <a href="#projects" class="btn" data-aos="zoom-in">View My Projects</a>
-    <button id="toggle-dark">🌓 Toggle Dark Mode</button>
-    <div id="lottie-animation" style="width: 300px; height: 300px; margin: 20px auto;"></div>
-  </div>
+    <button id="toggle-dark">🌓 Toggle Dark Mode</button>
 
+    <div id="lottie-animation" style="width: 300px; height: 300px; margin: 20px auto;"></div>
+
+  </div>
 </header>
-  <section id="projects">
-
-    <h2 data-aos="fade-up">🚀 My Projects</h2>
 
 
+  <section id="projects">
+    <h2 data-aos="fade-up">🚀 My Projects</h2>
 
-     <!-- Project 1 -->
+     <!-- Project 1 -->
+    <div class="project" data-aos="fade-right">
+    
+  <div>
+    <h3>Universe Space Gallery</h3>
+    <p> space gallery showcasing stunning visuals of the universe.</p>
+    <a href="https://ritikkumar07.github.io/Space/" target="_blank">🔗 Space Gallery</a>
+<!--     <a href="assets/weather.zip" download>📦 Download</a> -->
+    <div class="iframe-container">
+      <iframe src="https://ritikkumar07.github.io/Space/" frameborder="0" allowfullscreen></iframe>
+      
+    </div>
+  </div>
+</div>
+      <!-- Project 2 -->
+  <div class="project" data-aos="fade-left">
+    <div>
+      <h3>Music Player</h3>
+      <p>🚧 This website is currently under development. Stay tuned!</p>
+      <a href="https://ritik07.netlify.app/" target="_blank">🔗 youtify</a>
+      <!-- <a href="assets/todo.zip" download>📦 Download</a> -->
+      <div class="iframe-container">
+        <iframe src="https://ritik07.netlify.app/"></iframe>
+      </div>
+    </div>
+  </div>
 
-    <div class="project" data-aos="fade-right">
+       <!--project 2 -->
+     <div class="project" data-aos="fade-left">
+    <div>
+      <h3>Starbucks</h3>
+      <p>It's not just coffee, it's an experience</p>
+      <a href="https://5tarbucks.netlify.app/" target="_blank">🔗Starbucks</a>
+      <!-- <a href="assets/todo.zip" download>📦 Download</a> -->
+      <div class="iframe-container">
+        <iframe src="https://5tarbucks.netlify.app/"></iframe>
+      </div>
+    </div>
+  </div>
+  
 
-    
 
-  <div>
 
-    <h3>Universe Space Gallery</h3>
+    
+    <section id="about" data-aos="fade-up">
+  <h2>👨‍💻 About Me</h2>
+  <p>
+    I'm Ritik, a B.Tech CSE student passionate about web development and exploring new tech.
+    I enjoy building cool projects with HTML, CSS, and JavaScript. Always learning. Always curious.
+  </p>
 
-    <p> space gallery showcasing stunning visuals of the universe.</p>
+ <div class="skills">
+  <button onclick="window.location.href='https://online-notes.com/'">HTML</button>
 
-    <a href="https://ritikkumar07.github.io/Space/" target="_blank">🔗 Space Gallery</a>
-
-<!--     <a href="assets/weather.zip" download>📦 Download</a> -->
-
-    <div class="iframe-container">
-
-      <iframe src="https://ritikkumar07.github.io/Space/" frameborder="0" allowfullscreen></iframe>
-
-      
-
-    </div>
-
-  </div>
-
+  <button onclick="alert('CSS clicked!')">CSS</button>
+  <button onclick="alert('JavaScript clicked!')">JavaScript</button>
+  <button onclick="alert('Python clicked!')">Python</button>
+  <button onclick="alert('Git & GitHub clicked!')">Git & GitHub</button>
+  <button onclick="alert('Responsive Design clicked!')">Responsive Design</button>
+  <button onclick="alert('C++ clicked!')">C++</button>
 </div>
 
-      <!-- Project 2 -->
 
-  <div class="project" data-aos="fade-left">
-
-    <div>
-
-      <h3>Music Player</h3>
-
-      <p>🚧 This website is currently under development. Stay tuned!</p>
-
-      <a href="https://ritik07.netlify.app/" target="_blank">🔗 youtify</a>
-
-      <!-- <a href="assets/todo.zip" download>📦 Download</a> -->
-
-      <div class="iframe-container">
-
-        <iframe src="https://ritik07.netlify.app/"></iframe>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-       <!--project 2 -->
-
-     <div class="project" data-aos="fade-left">
-
-    <div>
-
-      <h3>Starbucks</h3>
-
-      <p>It's not just coffee, it's an experience</p>
-
-      <a href="https://5tarbucks.netlify.app/" target="_blank">🔗Starbucks</a>
-
-      <!-- <a href="assets/todo.zip" download>📦 Download</a> -->
-
-      <div class="iframe-container">
-
-        <iframe src="https://5tarbucks.netlify.app/"></iframe>
-
-      </div>
-
-    </div>
-
-  </div>
-
-    <section id="about" data-aos="fade-up">
-
-  <h2>👨‍💻 About Me</h2>
-
-  <p>
-
-    I'm Ritik, a B.Tech CSE student passionate about web development and exploring new tech.
-
-    I enjoy building cool projects with HTML, CSS, and JavaScript. Always learning. Always curious.
-
-  </p>
-
-
-
-  <section id="skills" data-aos="fade-up">
-
-  <h2>🛠️ My Skills</h2>
-
-  <div class="skills">
-
-    <div>HTML</div>
-
-    <div>CSS</div>
-
-    <div>JavaScript</div>
-
-    <div>Python</div>
-
-    <div>Git & GitHub</div>
-
-    <div>Responsive Design</div>
-
-    <div>C++</div>
-
-  </div>
-
+  <section id="contact" data-aos="fade-up">
+  <h2>📬 Contact Me</h2>
+  <form action="https://formspree.io/f/movwgqnn" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 
-
-</section>
-
-
-
-  </section>
-
-  <section id="contact" data-aos="fade-up">
-
-  <h2>📬 Contact Me</h2>
-
-  <form action="https://formspree.io/f/movwgqnn" method="POST">
-
-    <input type="text" name="name" placeholder="Your Name" required>
-
-    <input type="email" name="email" placeholder="Your Email" required>
-
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
-    <button type="submit">Send Message</button>
-
-  </form>
-
-</section>
-
-  <footer style="text-align: center; padding: 15px; background-color: #1e1e1e; color: #fff; font-family: 'Segoe UI', sans-serif;">
-
-  <p style="margin: 0;">
-
-    &copy; 2025 
-
-    <a href="https://myfoli0.netlify.app/" target="_blank" style="font-weight: 600; color: #00ffcc; text-decoration: none;">
-
-      Ritik
-
-    </a> • All rights reserved.
-
-  </p>
-
+  <footer style="text-align: center; padding: 15px; background-color: #1e1e1e; color: #fff; font-family: 'Segoe UI', sans-serif;">
+  <p style="margin: 0;">
+    &copy; 2025 
+    <a href="https://myfoli0.netlify.app/" target="_blank" style="font-weight: 600; color: #00ffcc; text-decoration: none;">
+      Ritik
+    </a> • All rights reserved.
+  </p>
 </footer>
-  <!-- AOS & Typing JS -->
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- AOS & Typing JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
 
-  <script>
+    // Typing Effect
+    const text = "Hi, I'm Ritik 👨‍💻";
+    let i = 0;
+    function typing() {
+      if (i < text.length) {
+        document.getElementById("typed-text").textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, 100);
+      }
+    }
+    typing();
+  </script>
+  <script>
+  const toggleBtn = document.getElementById("toggle-dark");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+</script>
+<script>
+  const topBtn = document.getElementById("topBtn");
 
-    AOS.init();
+  // Show button when scrolling down
+  window.onscroll = () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
 
-
-
-    // Typing Effect
-
-    const text = "Hi, I'm Ritik 👨‍💻";
-
-    let i = 0;
-
-    function typing() {
-
-      if (i < text.length) {
-
-        document.getElementById("typed-text").textContent += text.charAt(i);
-
-        i++;
-
-        setTimeout(typing, 100);
-
-      }
-
-    }
-
-    typing();
-
-  </script>
-
-  <script>
-
-  const toggleBtn = document.getElementById("toggle-dark");
-
-  toggleBtn.addEventListener("click", () => {
-
-    document.body.classList.toggle("dark-mode");
-
-  });
-
+  // Scroll to top when clicked
+  topBtn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 </script>
 
 <script>
-
-  const topBtn = document.getElementById("topBtn");
-
-  // Show button when scrolling down
-
-  window.onscroll = () => {
-
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-
-      topBtn.style.display = "block";
-
-    } else {
-
-      topBtn.style.display = "none";
-
-    }
-
-  };
-  // Scroll to top when clicked
-
-  topBtn.onclick = () => {
-
-    window.scrollTo({ top: 0, behavior: "smooth" });
-
-  };
-
+  const anim = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://assets5.lottiefiles.com/packages/lf20_0yfsb3a1.json' // 👈 Boy working animation
+  });
 </script>
-<script>
 
-  const anim = lottie.loadAnimation({
 
-    container: document.getElementById('lottie-animation'),
-
-    renderer: 'svg',
-
-    loop: true,
-
-    autoplay: true,
-
-    path: 'https://assets5.lottiefiles.com/packages/lf20_0yfsb3a1.json' // 👈 Boy working animation
-
-  });
-
-</script>
 
 <button id="topBtn" title="Go to top">⬆️</button>
 
 </body>
-
 </html>
